@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# الموقع الشخصي — محمد جروع العزني
 
-## Getting Started
+موقع عربي (RTL) بالتصميم التنفيذي الداكن (Premium Executive). المصدر الوحيد للمحتوى: `data/profile.ts`.
 
-First, run the development server:
+| المسار | السلوك |
+| --- | --- |
+| `/` | الصفحة الرئيسية — التصميم التنفيذي |
+| `/executive` | إعادة توجيه دائمة إلى `/` |
+| `/portfolio` | إعادة توجيه دائمة إلى `/` |
+
+## التشغيل محلياً
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+افتح [http://localhost:3000](http://localhost:3000). المنفذ الافتراضي لـ Next.js هو **3000**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## النشر على Vercel
 
-## Learn More
+1. ادفع المستودع إلى GitHub (أو GitLab / Bitbucket).
+2. من [Vercel](https://vercel.com/new) استورد المشروع.
+3. الإطار: Next.js — أوامر البناء الافتراضية كافية (`next build`).
+4. اختياري: عيّن متغير `NEXT_PUBLIC_SITE_URL` إلى النطاق النهائي (لوسوم Open Graph).
+5. انشر. الرابط العام هو `/`. `/executive` و `/portfolio` يُحوَّلان إلى الرئيسية.
 
-To learn more about Next.js, take a look at the following resources:
+ضع الصورة الشخصية في `public/profile.jpg` إن وُجدت. زر السيرة يشير إلى `public/cv.pdf`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## TODO(owner)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- تأكيد الإملاء: **جروع / جربوع** و **العزني / العنزي**.
+- تأكيد اتجاه التواريخ (يوم/شهر مقابل شهر/يوم)؛ الصيغ معروضة كما وردت دون إعادة تنسيق.
+- الفجوة الوظيفية **2020–2023** غير موثّقة — لا تُملأ حتى يوفّر المالك بياناً.
+- استبدال `public/profile.jpg` بالصورة الشخصية النهائية.
+- استبدال `public/cv.pdf` بالنسخة المعتمدة للسيرة إن لزم.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+لا توجد أرقام وهمية، ولا دراسات حالة، ولا شهادات عملاء، ولا بريد إلكتروني في المحتوى.
