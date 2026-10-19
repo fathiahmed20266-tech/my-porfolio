@@ -9,8 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: "var(--bg)",
+        fg: "var(--fg)",
+        accent: "var(--accent)",
+        "accent-soft": "var(--accent-soft, var(--accent))",
+        muted: "var(--muted)",
+        card: "var(--card)",
+        line: "var(--line)",
+        "on-accent": "var(--on-accent)",
+        primary: "var(--primary)",
+        chip: "var(--chip)",
+      },
+      borderRadius: {
+        theme: "var(--radius)",
+      },
+      boxShadow: {
+        card: "var(--shadow)",
+      },
+      fontFamily: {
+        sans: ["var(--font-ibm-plex-sans-arabic)", "sans-serif"],
       },
     },
   },
